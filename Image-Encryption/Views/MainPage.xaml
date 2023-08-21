@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="ImageEncryption.MainPage"
+             Shell.NavBarHasShadow="true">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="grid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Label Text="原图 (点击选择图片)" FontSize="Subtitle" Margin="5"/>
+            <ImageButton Grid.Row="1" x:Name="Original_Input_Btn" CornerRadius="10" Aspect="AspectFill"  BackgroundColor="LightGray" Margin="5" Clicked="Original_Input_Btn_Clicked"/>
+            <Label Grid.Row="2"  Text="输出 (点击保存)" FontSize="Subtitle" Margin="5"/>
+            <ImageButton Grid.Row="3" x:Name="Encrypt_Input_Btn" CornerRadius="10" Aspect="AspectFill" BackgroundColor="LightGray" Margin="5" Clicked="Encrypt_Save_Btn_Clicked"/>
+        </Grid>
+        <Grid Grid.Row="1" HeightRequest="55">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Editor x:Name="seed"
+                Keyboard="Numeric"
+                Placeholder="输入种子..."
+                Text="114514"
+                IsSpellCheckEnabled="True"
+                Margin="5"/>
+            <Button
+                x:Name="cryption_btn"
+                Text="开始"
+                SemanticProperties.Hint="加密/解码"
+                Clicked="CryptionBtnClicked"
+                Grid.Column="1" 
+                Margin="5"/>
+        </Grid>
+
+    </Grid>
+</ContentPage>
