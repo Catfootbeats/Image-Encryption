@@ -34,7 +34,7 @@
 	  <DefaultLanguage>zh-cn</DefaultLanguage>
 	  <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
 	  <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
-	  <PackageCertificateThumbprint>B7331BBB2F95B3247B01B6717D9B7C026FDBF9D5</PackageCertificateThumbprint>
+	  <PackageCertificateThumbprint>03DBA234D518D35E3F365CB497CE7215679C089E</PackageCertificateThumbprint>
 	  <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
 	  <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
 	  <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
@@ -67,6 +67,7 @@
 	  <ApplicationTitle>图像加密</ApplicationTitle>
 	  <ApplicationId>icu.catfootbeats.imgencryption</ApplicationId>
 	  <AndroidKeyStore>False</AndroidKeyStore>
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
